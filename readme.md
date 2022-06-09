@@ -14,13 +14,14 @@ $dreplacer->process('template.docx', 'data.xlsx');
 ## Dependencies
 
 [SimpleXLSX](https://github.com/shuchkin/simplexlsx)
+
 [PHP .docx replacer](https://github.com/igorrebega/docx-replacer)
 
-### Sample Template
+## Sample Template
 
 [sampletemplates](https://www.sampletemplates.com/sample-profile/simple-company-profile-template.html)
 
 
-### Changelog
+## Changelog
 
 2022-06-09 - Initial Release
