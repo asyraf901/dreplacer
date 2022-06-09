@@ -34,21 +34,49 @@ if(isset($_FILES['templateFile']) && isset($_FILES['dataFile'])){
 <!DOCTYPE html>
 <html>
 <body>
-
-<h2>Dreplacer</h2>
-
-<form method="post" enctype="multipart/form-data">
-  <label for="templateFile">Template file:</label>
-  <input type="file" id="templateFile" name="templateFile" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"/><br><br>
-  <label for="dataFile">Data file:</label>
-  <input type="file" id="dataFile" name="dataFile" accept=".xlsx, .xls"/><br><br><br>
-  <input type="submit" value="Submit"/>
-</form>
-
-<br/><br/><br/><br/>
-<h4>Sample Files</h4>
-<a href="sample_files/template_sample.docx" download>template_sample.docx</a><br><br>
-<a href="sample_files/data_sample.docx" download>data_sample.docx</a>
-
+    <div id="mainContainer">
+        <div id="content">
+            <h2>Dreplacer</h2>
+            <form method="post" enctype="multipart/form-data">
+                <label for="templateFile">Template file:</label>
+                <input type="file" id="templateFile" name="templateFile" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"/><br><br>
+                <label for="dataFile">Data file:</label>
+                <input type="file" id="dataFile" name="dataFile" accept=".xlsx, .xls"/><br><br><br>
+                <input type="submit" value="Submit"/>
+            </form>
+            <h4>Sample Files</h4>
+            <a href="sample_files/template_sample.docx" download>template_sample.docx</a><br><br>
+            <a href="sample_files/data_sample.xlsx" download>data_sample.xlsx</a>
+        </div>
+    </div>
 </body>
 </html>
+
+<style>
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#content {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 30%;
+}
+
+#mainContainer {
+    display: flex;
+    justify-content: center;
+}
+</style>
