@@ -551,10 +551,14 @@ class SimpleXLSX {
 			}
 
 			// XML External Entity (XXE) Prevention
-			$_old         = libxml_disable_entity_loader();
+			if (\PHP_VERSION_ID < 80000) {
+				$_old         = libxml_disable_entity_loader();
+		   	}
 			$entry_xmlobj = simplexml_load_string( $entry_xml );
 
-			libxml_disable_entity_loader( $_old );
+			if (\PHP_VERSION_ID < 80000) {
+				libxml_disable_entity_loader( $_old );
+		   	}
 			if ( $entry_xmlobj ) {
 				return $entry_xmlobj;
 			}

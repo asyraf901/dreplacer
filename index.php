@@ -46,7 +46,8 @@ if(isset($_FILES['templateFile']) && isset($_FILES['dataFile'])){
             </form>
             <h4>Sample Files</h4>
             <a href="sample_files/template_sample.docx" download>template_sample.docx</a><br><br>
-            <a href="sample_files/data_sample.xlsx" download>data_sample.xlsx</a>
+            <a href="sample_files/data_sample.xlsx" download>data_sample.xlsx</a><br><br><br><br>
+            <div class='gitlink'><a href="https://github.com/asyraf901/dreplacer"  target="_blank">dreplacer</a> - github.com</div>
         </div>
     </div>
 </body>
@@ -66,6 +67,10 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #45a049;
+}
+
+.gitlink{
+    float:right;
 }
 
 #content {
